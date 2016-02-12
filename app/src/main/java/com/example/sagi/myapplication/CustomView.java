@@ -28,6 +28,7 @@ public class CustomView extends SurfaceView {
         mHolder = getHolder();
         ps = new ArrayList<>();
         // create the Paint and set its color
+        //added line blabla
         paint = new Paint();
         paint.setColor(Color.GRAY);
     }
