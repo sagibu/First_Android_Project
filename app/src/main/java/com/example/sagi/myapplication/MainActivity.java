@@ -31,75 +31,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        customView = (CustomView)findViewById(R.id.paint_surface);
+        customView = (CustomView) findViewById(R.id.paint_surface);
+        btn = (Button) findViewById(R.id.button);
 
-//        customView.setOnTouchListener(customView);
-
-//        paint.setColor(Color.RED);
-//        paint.setStyle(Paint.Style.FILL);
-//        btn = (Button)findViewById(R.id.button);
-//
-//        findViewById(android.R.id.content).setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//                if (event.getAction() == MotionEvent.ACTION_DOWN)
-//
-//                    return true;
-//            }
-//        });
-//        btn.setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//                if (event.getAction() == MotionEvent.ACTION_DOWN)
-//                {
-//                    loop = true;
-//                    change = new ButtonChange();
-//                    change.execute(btn);
-//                }
-//                else if (event.getAction() == MotionEvent.ACTION_UP)
-//                {
-//                    loop = false;
-//                    x *= -1;
-//                }
-////                    btn.setBackgroundColor(Color.LTGRAY);
-//                return true;
-//            }
-//        });
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                customView.clear();
+            }
+        });
 
     }
-//    private class ButtonChange extends AsyncTask<Button, Button, Void> {
-//
-//        @Override
-//        protected Void doInBackground(Button... params) {
-//            while(loop) {
-//                try {
-//                    Thread.sleep(1);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//                publishProgress(params);
-//            }
-//            return null;
-//        }
-//
-//        @Override
-//        protected void onProgressUpdate(Button... values) {
-////            Display display = getWindowManager().getDefaultDisplay();
-////            Point size = new Point();
-////            display.getSize(size);
-////            int width = size.x;
-////            int height = size.y;
-//            ViewGroup.LayoutParams par = values[0].getLayoutParams();
-//            values[0].setRotation(values[0].getRotation() + 10);
-//            if((par.width < 1500 && x > 0 ) ||  (par.width > 100 && x < 0))
-//            par.width += 10 * x;
-//            if((par.height < 1500 && x > 0) || (x < 0 && par.height > 100))
-//            par.height += 10 * x;
-//            btn.setLayoutParams(par);
-//
-//        }
-//    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -121,5 +63,4 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
 }

@@ -13,11 +13,11 @@
     tools:showIn="@layout/activity_main">
 
 
-    <!--<Button-->
-        <!--android:layout_width="300dp"-->
-        <!--android:layout_height="300dp"-->
-        <!--android:text="MAGIC"-->
-        <!--android:id="@+id/button"-->
-        <!--android:layout_centerVertical="true"-->
-        <!--android:layout_centerHorizontal="true" />-->
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="Clear Screen"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
